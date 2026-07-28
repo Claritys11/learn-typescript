@@ -14,3 +14,35 @@
  * 3. Create the variable declarations using TypeScript.
  * 4. Display the student data using console.log.
  */
+/**
+ * Module 01: Data Types — Examples
+ *
+ * Run: npm run example src/01-data-types/examples/basic-types.ts
+ */
+
+// Primitive types
+const studentName: string = `Nadia Putri`;
+const studentID: string = `ST2026045`;
+// Arrays
+type StudentScore = {
+    assignment: number;
+    midterm: number;
+    finalexam: number;
+    attendance: number;
+}
+const nadiaScore: StudentScore = {
+    assignment: 88.5,
+    midterm: 84,
+    finalexam: 91.5,
+    attendance: 100
+}
+
+const extracurricularActivity: string = `Cyber Security`
+
+console.log(`Name: ${studentName}`)
+console.log(`ID: ${studentID}`)
+console.log(`Extracurricular: ${extracurricularActivity}`)
+console.log(`Assignment Score: ${nadiaScore.assignment}`)
+console.log(`Midterm Score: ${nadiaScore.midterm}`)
+console.log(`Finalexam score: ${nadiaScore.finalexam}`)
+console.log(`Attendance score: ${nadiaScore.attendance}`)   

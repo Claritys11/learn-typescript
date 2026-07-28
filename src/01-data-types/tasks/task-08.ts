@@ -21,3 +21,19 @@
  * 2. Store the temperature data in a single collection.
  * 3. Display the temperature data using console.log.
  */
+
+type Temperature = {
+    highest: number
+    lowest: number
+    average: number
+    time: string
+}
+let Temperature: Temperature[] = [
+    {
+        highest: 31.1,
+        lowest: 24.5,
+        average: 28.2625,
+        time: `08:00-15:00`
+    }
+]
+console.log(Temperature)
