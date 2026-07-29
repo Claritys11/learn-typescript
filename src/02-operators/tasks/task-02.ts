@@ -14,3 +14,22 @@
  * Task: Store and display the result in a variable named "isEligible"
 
  */
+
+type Conditions = {
+    finalScore: number
+    attendance: number
+    tuitionPaid: boolean
+}
+let Student: Conditions = {
+    finalScore: 82,
+    attendance: 94,
+    tuitionPaid: true
+} 
+function isEligible(): any {
+    if(Student.finalScore >= 75 && Student.attendance >= 90 && Student.tuitionPaid == true){
+        return console.log(`Eligible`)
+    } else {
+        return console.log(`Not Eligible`)
+    }
+}
+console.log(isEligible())

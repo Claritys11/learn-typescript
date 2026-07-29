@@ -17,3 +17,25 @@
  * - Bonus
  * - Final salary
  */
+type Information = {
+    name: string
+    basicSalary: number
+    overtimeHours: number
+    overtimeRate: number
+}
+let Employee: Information = {
+    name: `Dimas`,
+    basicSalary: 5000000,
+    overtimeHours: 12,
+    overtimeRate: 50000
+}
+let overtimePay = Employee.overtimeHours * Employee.overtimeRate
+let Bonus = 0
+if(Employee.overtimeHours > 10){
+    Bonus += 300000
+}
+let finalSalary = Employee.basicSalary + Bonus + overtimePay
+console.log(`Basic Salary: ${Employee.basicSalary}`)
+console.log(`Overtime pay: ${overtimePay}`)
+console.log(`Bonus: ${Bonus}`)
+console.log(`Your final Salary: ${finalSalary}`)

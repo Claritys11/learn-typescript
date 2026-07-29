@@ -1,3 +1,5 @@
+import { compileFunction } from "node:vm";
+
 /**
  * A university is selecting students for a full scholarship.
  * A student will receive the scholarship only if all of the following requirements are satisfied:
@@ -33,3 +35,38 @@
  * - Calculate the remaining scholarship budget.
  * - Display whether the student is accepted.
  */
+type Information = {
+    name: string
+    GPA: number
+    familyIncome: number
+    competitionCount: number
+    hasDisciplinaryRecord: boolean
+    documentsComplete: boolean
+}
+let Student: Information = {
+    name: `Alya Putri`,
+    GPA: 3.89,
+    familyIncome: 4200000,
+    competitionCount: 4,
+    hasDisciplinaryRecord: false,
+    documentsComplete: true
+}
+let budgetScholarship: number = 500000000
+// let scholarshipAmount: number = Student.GPA >= 3.75 && Student.familyIncome < 5000000 && Student.competitionCount >= 3 && Student.hasDisciplinaryRecord == false && Student.documentsComplete == true ? 12000000 : 0
+let accepted: boolean = false
+if(Student.GPA >= 3.75 && Student.familyIncome < 5000000 && Student.competitionCount >= 3 && Student.hasDisciplinaryRecord == false && Student.documentsComplete == true){
+    // let scholarshipAmount = 12000000
+    accepted = true
+    // console.log(`Youre accepted for the Scholarship!`)
+} else {
+    // let scholarshipAmount = 0
+    accepted=  false
+    // console.log(`Sorry, you aren't accepted for the Scholarship, try again next time!`)
+}
+
+let scholarshipAmount = accepted ? 12000000 : 0
+console.log(accepted ? `Youre accepted for the Scholarship!`:`Sorry, you aren't accepted for the Scholarship, try again next time!`);
+
+let remainingBudget = budgetScholarship - scholarshipAmount
+console.log(`Total Budget: ${budgetScholarship}`)
+console.log(`Remaining budget: ${remainingBudget}`)
