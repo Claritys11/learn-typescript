@@ -45,3 +45,43 @@ Student Tasks
 - Use nested conditional statements.
 - Display the final registration result.
  */
+
+import { toUnicode } from "node:punycode";
+
+type Information = {
+    name: string
+    activeStudent: boolean
+    tuitionPaid: boolean
+    passedProgrammingFundamentals: boolean
+    passedDatabaseSystems: boolean
+    GPA: number
+    seatsAvaliable: boolean
+}
+let Student: Information = {
+    name: `Nadia Putri`,
+    activeStudent: true,
+    tuitionPaid: true,
+    passedProgrammingFundamentals: true,
+    passedDatabaseSystems: true,
+    GPA: 3.45,
+    seatsAvaliable: false
+
+}
+
+if(Student.activeStudent && Student.tuitionPaid){
+    if(Student.passedProgrammingFundamentals && Student.passedDatabaseSystems && Student.GPA >= 3.20){
+        if(Student.seatsAvaliable){
+            console.log(`Registration Successful!!`);
+            
+        } else {
+            console.log(`Added to Waiting List`);
+            
+        }
+    } else {
+        console.log(`Academic Requirements Not Met`);
+        
+    }
+} else {
+    console.log(`Rejected`);
+    
+}

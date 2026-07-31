@@ -8,6 +8,7 @@
  * - Calculate the attendance percentage.
  */
 
+
 const attendances = [
   { name: "Alya", present: true },
   { name: "Budi", present: true },
@@ -18,3 +19,22 @@ const attendances = [
   { name: "Gita", present: true },
   { name: "Hana", present: false }
 ];
+
+let present: number= 0
+let absent: number= 0
+
+for(let i = 0; i < attendances.length; i++){
+  let attendancesName = attendances[i]
+  let attendancesPresent = attendances[i]
+  if(attendancesPresent.present){
+    present++
+  } else {
+    absent++
+  }
+  console.log(`Name: ${attendancesName.name}`);
+  
+}
+console.log(`Present: ${present}`);
+console.log(`Absent: ${absent}`);
+let persen: number = present /attendances.length
+console.log(`Attandance Percentage: ${persen * 100}%`);

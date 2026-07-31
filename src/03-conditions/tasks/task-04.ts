@@ -22,3 +22,27 @@
  * 2. Implement the logic using nested if statements.
  * 3. Display the reservation result.
  */
+
+type Reservation = {
+    name: string
+    premiumMember: boolean
+    roomAvaliable: boolean
+}
+let Today: Reservation = {
+    name: `Nadia Putri`,
+    premiumMember: true,
+    roomAvaliable: false
+}
+if(Today.roomAvaliable){
+    if(Today.premiumMember){
+        console.log(`You get free room upgrade.`);
+    } else{
+        console.log(`You only receive the reserved room only.`);
+    }
+} else {
+    if(Today.premiumMember){
+        console.log(`You're placed in the priority waiting list.`);
+    } else {
+        console.log(`Sorry, there's no rooms are avaliable now.`);
+    }    
+}

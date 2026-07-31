@@ -24,3 +24,24 @@ const scores = [
     67, 79, 94, 83, 71,
     96, 65, 87, 74, 90
 ];
+
+let goldmedal: number =0
+let silvermedal: number =0
+let bronzemedal: number =0
+let nomedal: number =0
+
+for(let i = 0; i < scores.length; i++){
+    if(scores[i] >= 95){
+        goldmedal++
+    } else if (scores[i] >85 && scores[i] <94){
+        silvermedal++
+    } else if (scores[i] >75 && scores[i]<84){
+        bronzemedal++
+    } else {
+        nomedal++
+    }
+}
+console.log(`Gold medal: ${goldmedal}`);
+console.log(`Silver medal: ${silvermedal}`);
+console.log(`Bronze medal: ${bronzemedal}`);
+console.log(`No Medal: ${nomedal}`);
