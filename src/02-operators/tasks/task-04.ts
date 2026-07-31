@@ -75,6 +75,9 @@ console.log(`With subtotal Pad: ${subtotalPad}`)
 console.log()
 //discount
 let totalBeforeDiscount = subtotalKeyboard + subtotalMouse + subtotalPad
+//challenge
+console.log(`Total sebelum diskon ${totalBeforeDiscount}`)
+
 if (totalBeforeDiscount >= 1000000){
     let totalAfterDiscount = totalBeforeDiscount * 0.10
     console.log(`Here's your total after discountt! ${totalAfterDiscount}`)
