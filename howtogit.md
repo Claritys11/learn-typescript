@@ -1,5 +1,4 @@
 2. Cara Kerja SelanjutnyaJika ingin mengambil update terbaru dari zakaria29:bash
-git pull upstream main (jangan pake ini deh) /
 git fetch upstream 
 setelah itu 
 git merge upstream/main

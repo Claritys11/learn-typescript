@@ -21,3 +21,30 @@
  * 3. Display the bonus result inside the function.
  * 4. Call the function for every employee.
  */
+
+type Data = {
+    employee: string[]
+    score: number[]
+}
+let Employee: Data = {
+    employee: [`John Cena`, `Undertaker`, `Rey Mysterio`],
+    score: [92, 76, 88]
+}
+
+function showBonusStatus(score: number){
+    if(score >= 85){
+        console.log(`Bonus Approved`);
+    } else {
+        console.log(`Bonus Not Approved`);
+        
+    }
+    
+}
+
+for(let i = 0; i < Employee.employee.length; i++){
+    console.log(`Name: ${Employee.employee[i]}`);
+    showBonusStatus(Employee.score[i])
+    console.log();
+    
+    
+}

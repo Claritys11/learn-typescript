@@ -20,3 +20,19 @@ const attendances = [
     { name: "Dimas", present: true },
     { name: "Eka", present: false }
 ];
+let dateng: number = 0
+let absent: number = 0
+
+function printAttendanceReport(list: {name: string, present: boolean}[]) {
+    list.forEach((ngitung) => {
+        if(ngitung.present){
+            dateng++
+        } else{
+            absent++
+        console.log(`Yang absent: ${ngitung.name}`);
+        }        
+    });
+    console.log(`Yang dateng ada: ${dateng}`);
+    console.log(`Yang absent ada: ${absent}`);
+}
+printAttendanceReport(attendances)

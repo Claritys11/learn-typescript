@@ -31,6 +31,7 @@ let passed: number = 0
 let revise: number = 0
 let scorenyanol: number =0
 let totalScore: number = 0
+let highestScore: number = 0
 for(let i = 0; i < submissions.length; i++){
     totalScore += submissions[i].score
     if(submissions[i].submitted){
@@ -44,6 +45,11 @@ for(let i = 0; i < submissions.length; i++){
         revise++
     } else {
         passed++
+    }
+    if(highestScore < submissions[i].score){
+        highestScore = submissions[i].score
+        console.log(`The person who have the highest score is ${submissions[i].student}`);
+        
     }
 }
 let average: number = totalScore / submissions.length

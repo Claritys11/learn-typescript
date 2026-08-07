@@ -10,8 +10,12 @@
  * 
  * Complete following functions!
  */
-
-const students = [
+type Students = {
+  name: string
+  major: string
+  active: boolean
+}
+const students: Students[] = [
   {
     name: "Alya",
     major: "Software Engineering",
@@ -39,18 +43,49 @@ const students = [
   }
 ];
 
-function countActiveStudents(...){
-
+function countActiveStudents(students: Students[]): void{
+  let active: number = 0
+  for(const student of students){
+    active++
+  } return console.log(`Active: ${active}`);
+  
 }
 
-function countInactiveStudents(...){
-
+function countInactiveStudents(students: Students[]): any{
+  let inactive: number = 0
+  // for(const student of students){
+  //   if(student.)
+  // }
+  students.forEach(element => {
+    if(!element.active){
+      inactive++    
+    }
+  });
+  return console.log(`Inactive: ${inactive}`);
+  
 }
 
-function countStudentsByMajor(...){
-
+function countStudentsByMajor(students: Students[]){
+  let net: number = 0
+  let soft: number =0
+  let multi: number =0
+  students.forEach(element => {
+    if(element.major == "Networking"){
+      net++
+    } else if (element.major == "Software Engineering"){
+      soft++
+    } else if(element.major == "Multimedia"){
+      multi++
+    }
+  });
+  return console.log(`Networking: ${net}, Multimedia: ${multi}, Software Engineering: ${soft}`);
+  
 }
 
-function printEnrollmentReport(...){
-    
+function printEnrollmentReport(){
+  countActiveStudents(students)
+  countInactiveStudents(students)
+  countStudentsByMajor(students)
+
 }
+printEnrollmentReport()

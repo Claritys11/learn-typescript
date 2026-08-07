@@ -24,3 +24,24 @@
  * 5. Display every student's final grade.
 
  */
+
+type Info = {
+    name: string []
+    assignment: number[]
+    midterm: number[]
+    final: number[]
+}
+let Scores: Info ={
+    name: ["Alya", "Budi", "Citra"],
+    assignment: [85, 78, 90],
+    midterm: [80, 75, 88],
+    final: [92, 81, 95]
+}
+function calculateFinalGrade(a: number, b: number, c: number): number {
+    return (a * 0.30) + (b * 0.30) + (c * 0.40)
+}
+for(let i = 0; i < Scores.name.length; i++){
+    console.log(`Name: ${Scores.name[i]}`);
+    console.log(`Final Scores: ${calculateFinalGrade(Scores.assignment[i], Scores.midterm[i], Scores.final[i])}`);
+    console.log();
+}
