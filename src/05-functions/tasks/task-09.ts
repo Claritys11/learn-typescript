@@ -1,5 +1,3 @@
-import { totalmem } from "node:os";
-
 /**
  * A hospital stores patient information in the following array.
  * The hospital director requests a daily report containing:
